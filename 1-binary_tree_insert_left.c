@@ -1,10 +1,9 @@
 #include "binary_trees.h"
-
 /**
- * binary_tree_insert_left - This creates a new-code of a binary tree
- * @parent: D root of d binary tree
- * @value: D value d node
- * Return: D newly created node
+ * binary_tree_insert_left - creates a new_node of a binary tree
+ * @parent: root node of the binary tree
+ * @value: value of the node
+ * Return: the newly created node
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
