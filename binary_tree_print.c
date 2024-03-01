@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <string.h>
-#include "binary_tree.h"
+#include "binary_trees.h"
 
 /* Original code from http://stackoverflow.com/a/13755911/5184480 */
 
@@ -24,9 +24,9 @@ static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 		return (0);
 	is_left = (tree->parent && tree->parent->left == tree);
 	width = sprintf(m, "(%03d)", tree->n);
-	left - print_t(tree->left, offset, depth + 1, s);
+	left = print_t(tree->left, offset, depth + 1, s);
 	right = print_t(tree->right, offset + left + width, depth + 1, s);
-	for (z = 0; z < width; m++)
+	for (z = 0; z < width; z++)
 		s[depth][offset + left + z] = m[z];
 	if (depth && is_left)
 	{
